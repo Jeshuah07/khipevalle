@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>¡Gracias por tu Compra! | KAPHI & VALLE S.R.L.</title>
+  
+  <meta name="description" content="Tu pedido ha sido registrado con éxito en Kaphi & Valle S.R.L. Revisa tu comprobante y estado de despacho.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  
+  <style>
+    @media print {
+      .top-bar, .site-header, .site-footer, .no-print {
+        display: none !important;
+      }
+      .order-success-card {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+        margin: 0 !important;
+        max-width: 100% !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- TOP BAR -->
+  <div class="top-bar no-print">
+    <div class="container">
+      <div class="top-bar-notice">
+        <span data-i18n="topbar.notice">🇧🇴 Hecho en Bolivia | Envíos a todo el país y el mundo</span>
+      </div>
+      <div class="top-bar-controls">
+        <div class="switcher-group">
+          <button type="button" class="switcher-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="switcher-btn" data-set-lang="en">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header no-print">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo.png" alt="Logotipo KAPHI & VALLE" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-title">KAPHI & VALLE</span>
+          <span class="brand-subtitle">INDUSTRIAS S.R.L.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+        <a href="tienda.html" class="nav-link" data-i18n="nav.shop">Tienda</a>
+        <a href="nosotros.html" class="nav-link" data-i18n="nav.about">Nosotros</a>
+        <a href="contacto.html" class="nav-link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" style="padding: var(--spacing-8) var(--spacing-4);">
+    <div class="order-success-card" id="order-card-container">
+      <!-- Cargado dinámicamente con JS -->
+      <div style="text-align: center; padding: 3rem;">
+        <p class="lead">Cargando resumen de tu orden...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer no-print">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> — <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { CONFIG } from './js/config.js';
+    import { formatPrice } from './js/currency.js';
+    import { getCurrentLanguage, applyTranslations, t } from './js/i18n.js';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderOrderConfirmation();
+    });
+
+    function renderOrderConfirmation() {
+      const container = document.getElementById('order-card-container');
+      const rawOrder = localStorage.getItem(CONFIG.paths.lastOrderKey);
+
+      if (!rawOrder) {
+        container.innerHTML = `
+          <div style="font-size: 3rem; margin-bottom: 1rem;">📦</div>
+          <h2>No se encontró ninguna orden reciente</h2>
+          <p class="text-muted" style="margin-bottom: 2rem;">Si acabas de realizar una compra, tus datos ya fueron procesados.</p>
+          <a href="tienda.html" class="btn btn-primary btn-lg">Explorar Tienda</a>
+        `;
+        return;
+      }
+
+      let order;
+      try {
+        order = JSON.parse(rawOrder);
+      } catch (e) {
+        console.error("Error al parsear orden:", e);
+        return;
+      }
+
+      const isPayPal = order.paymentMethod === 'paypal';
+      const statusBadgeClass = isPayPal ? 'badge-success' : 'badge-bolivia';
+      const dateFormatted = new Date(order.date || Date.now()).toLocaleString();
+      const lang = getCurrentLanguage();
+
+      let paymentDetailsHtml = '';
+      if (isPayPal) {
+        paymentDetailsHtml = `
+          <div class="alert alert-success" style="text-align: left; margin: 1.5rem 0;">
+            <div>
+              <strong>✅ Pago Aprobado en PayPal Sandbox:</strong><br>
+              ID de Transacción: <code>${order.transactionId || order.orderId}</code><br>
+              Total Pagado: <strong>$ ${order.totalUsd} USD</strong>
+            </div>
+          </div>
+        `;
+      } else {
+        paymentDetailsHtml = `
+          <div class="alert alert-warning" style="text-align: left; margin: 1.5rem 0;">
+            <div>
+              <strong>⏳ Pago por QR / Transferencia BNB:</strong><br>
+              Estado: <strong>Pendiente de verificación de comprobante</strong>.<br>
+              Monto a transferir: <strong>Bs ${order.totalBob}</strong> con referencia <strong>${order.orderId}</strong>.
+            </div>
+          </div>
+
+          <div style="margin: 1.5rem 0;">
+            <a href="${order.whatsappLink || '#'}" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg btn-full" style="font-size: 1rem;">
+              📲 Enviar Comprobante por WhatsApp a Ventas
+            </a>
+          </div>
+        `;
+      }
+
+      const itemsHtml = (order.items || []).map(i => {
+        const name = (typeof i.name === 'object') ? (i.name[lang] || i.name.es) : i.name;
+        return `
+          <li style="display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px solid #f1f5f9; font-size:0.9rem;">
+            <span>${i.quantity}x ${name}</span>
+            <strong>Bs ${(i.price_bob * i.quantity).toFixed(2)}</strong>
+          </li>
+        `;
+      }).join('');
+
+      container.innerHTML = `
+        <div class="success-icon-badge">✓</div>
+        <h1 style="font-size: 2rem; margin-bottom: 0.5rem;" data-i18n="thanks.title">¡Muchas Gracias por tu Compra!</h1>
+        <p class="lead" style="margin-bottom: 1.5rem;" data-i18n="thanks.subtitle">Tu orden ha sido registrada con éxito en Kaphi & Valle.</p>
+
+        <div style="background: var(--color-bg-alt); padding: 1rem; border-radius: var(--radius-md); margin-bottom: 1.5rem; display:flex; justify-content:space-around; flex-wrap:wrap; gap:1rem;">
+          <div>
+            <span style="font-size:0.75rem; color:#64748b; text-transform:uppercase;" data-i18n="thanks.order_number">Número de Pedido:</span>
+            <div style="font-weight: 800; font-size: 1.2rem; color: var(--color-brand-navy-dark);">${order.orderId}</div>
+          </div>
+          <div>
+            <span style="font-size:0.75rem; color:#64748b; text-transform:uppercase;" data-i18n="thanks.date">Fecha:</span>
+            <div style="font-weight: 600; font-size: 0.95rem;">${dateFormatted}</div>
+          </div>
+          <div>
+            <span style="font-size:0.75rem; color:#64748b; text-transform:uppercase;">Estado:</span>
+            <div><span class="badge ${statusBadgeClass}">${order.statusLabel || 'Registrado'}</span></div>
+          </div>
+        </div>
+
+        ${paymentDetailsHtml}
+
+        <!-- Detalle del Cliente y Productos -->
+        <div style="text-align: left; margin: 1.5rem 0; background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 1.25rem;">
+          <h4 style="margin-bottom: 0.75rem; font-size: 1rem; color: var(--color-brand-navy-dark);">Destinatario y Envío:</h4>
+          <p style="font-size: 0.85rem; color: #475569; margin-bottom: 1rem; line-height: 1.5;">
+            <strong>Cliente:</strong> ${order.customer?.fullName || 'N/A'}<br>
+            <strong>Contacto:</strong> ${order.customer?.phone || 'N/A'} • ${order.customer?.email || 'N/A'}<br>
+            <strong>Destino:</strong> ${order.customer?.city || ''}, ${order.customer?.countryName || ''}<br>
+            <strong>Dirección:</strong> ${order.customer?.address || 'N/A'}
+          </p>
+
+          <h4 style="margin-bottom: 0.75rem; font-size: 1rem; color: var(--color-brand-navy-dark);">Productos del Pedido:</h4>
+          <ul style="margin-bottom: 1rem;">
+            ${itemsHtml}
+          </ul>
+
+          <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.15rem; color: var(--color-brand-navy-dark); border-top: 2px dashed var(--color-border); padding-top: 0.75rem;">
+            <span>Total del Pedido:</span>
+            <span style="color: var(--color-brand-amber);">Bs ${order.totalBob} (~$ ${order.totalUsd} USD)</span>
+          </div>
+        </div>
+
+        <!-- Acciones finales -->
+        <div class="no-print" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+          <button type="button" class="btn btn-outline" onclick="window.print()">
+            🖨️ <span data-i18n="thanks.print_btn">Imprimir Resumen</span>
+          </button>
+          <a href="index.html" class="btn btn-secondary">
+            🏠 <span data-i18n="thanks.back_home">Volver al Inicio</span>
+          </a>
+          <a href="tienda.html" class="btn btn-primary">
+            🛒 Seguir Comprando
+          </a>
+        </div>
+      `;
+
+      applyTranslations();
+    }
+  </script>
+</body>
+</html>

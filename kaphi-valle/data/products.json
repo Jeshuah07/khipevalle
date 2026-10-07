@@ -1,0 +1,191 @@
+[
+  {
+    "id": "prod-01",
+    "name": {
+      "es": "Mermelada Artesanal de Frutilla del Valle",
+      "en": "Artisanal Valley Strawberry Jam"
+    },
+    "description": {
+      "es": "Elaborada con frutillas seleccionadas de los valles templados de Bolivia, cocinadas lentamente con azúcar morena y gotas de limón silvestre. 100% natural, sin pectina química ni preservantes.",
+      "en": "Handcrafted with premium strawberries selected from the fertile Bolivian valleys, slow-simmered with unrefined cane sugar and wild lime drops. 100% natural."
+    },
+    "category": "mermeladas",
+    "price_bob": 35.00,
+    "price_usd": 5.03,
+    "image": "assets/img/prod_mermelada_frutilla.png",
+    "stock": 45,
+    "weight_g": 320,
+    "badge": {
+      "es": "Más Vendido",
+      "en": "Best Seller"
+    },
+    "ingredients": {
+      "es": "Frutillas frescas bolivianas (70%), azúcar morena de caña, jugo de limón natural.",
+      "en": "Fresh Bolivian strawberries (70%), brown cane sugar, natural lime juice."
+    },
+    "supplier": "Asociación de Productores Valles de Cochabamba / Kaphi & Valle",
+    "dispatch_time_days": 2
+  },
+  {
+    "id": "prod-02",
+    "name": {
+      "es": "Miel Pura de Abeja Silvestre de los Valles",
+      "en": "Pure Wildflower Valley Honey"
+    },
+    "description": {
+      "es": "Miel 100% pura y cruda recolectada en colmenas ubicadas en la flora nativa de los valles interandinos. Rica en polen, antioxidantes y enzimas naturales intactas.",
+      "en": "100% raw and pure honey harvested from apiaries surrounded by native inter-Andean floral flora. Rich in natural pollens and living enzymes."
+    },
+    "category": "miel",
+    "price_bob": 50.00,
+    "price_usd": 7.18,
+    "image": "assets/img/prod_miel_artesanal.png",
+    "stock": 30,
+    "weight_g": 500,
+    "badge": {
+      "es": "100% Pura y Cruda",
+      "en": "100% Pure & Raw"
+    },
+    "ingredients": {
+      "es": "Miel de abeja 100% pura de flores silvestres del valle, sin pasteurizar.",
+      "en": "100% pure raw wildflower honey, unpasteurized."
+    },
+    "supplier": "Apiarios Kaphi & Valle - Cuenca del Río Mizque",
+    "dispatch_time_days": 2
+  },
+  {
+    "id": "prod-03",
+    "name": {
+      "es": "Mix de Frutas Deshidratadas Andino-Valle",
+      "en": "Andean-Valley Dried Fruit Medley"
+    },
+    "description": {
+      "es": "Selección deshidratada al sol de manzana criolla, durazno de San Benito y plátano dulce del Chapare. Snack energético, libre de azúcares añadidos y conservantes.",
+      "en": "Sun-dried selection of local apples, San Benito peaches, and sweet Chapare bananas. Energizing healthy snack without added sugars or preservatives."
+    },
+    "category": "deshidratados",
+    "price_bob": 28.00,
+    "price_usd": 4.02,
+    "image": "assets/img/prod_frutas_deshidratadas.png",
+    "stock": 50,
+    "weight_g": 200,
+    "badge": {
+      "es": "Sin Azúcar Añadida",
+      "en": "No Added Sugar"
+    },
+    "ingredients": {
+      "es": "Manzana, durazno y plátano deshidratados naturalmente en horno solar.",
+      "en": "Apples, peaches, and bananas naturally dehydrated in solar ovens."
+    },
+    "supplier": "Comunidad Agroecológica El Valle / Kaphi & Valle",
+    "dispatch_time_days": 1
+  },
+  {
+    "id": "prod-04",
+    "name": {
+      "es": "Jalea Tradicional de Membrillo Criollo",
+      "en": "Traditional Golden Quince Jelly"
+    },
+    "description": {
+      "es": "Jalea translúcida de textura suave elaborada con el jugo puro de membrillos de huertos tradicionales. Ideal para acompañar quesos criollos o panes de masa madre.",
+      "en": "Clear golden jelly made from pure freshly pressed quince juice from heritage orchards. Perfect accompaniment for artisan cheeses or sourdough breads."
+    },
+    "category": "jaleas",
+    "price_bob": 32.00,
+    "price_usd": 4.60,
+    "image": "assets/img/prod_jalea_membrillo.png",
+    "stock": 25,
+    "weight_g": 300,
+    "badge": {
+      "es": "Receta Tradicional",
+      "en": "Heritage Recipe"
+    },
+    "ingredients": {
+      "es": "Extracto concentrado de membrillo criollo, azúcar rubia, clavo de olor.",
+      "en": "Concentrated local quince extract, cane sugar, trace clove."
+    },
+    "supplier": "Huertos Familiares del Valle Alto / Kaphi & Valle",
+    "dispatch_time_days": 2
+  },
+  {
+    "id": "prod-05",
+    "name": {
+      "es": "Salsa Agridulce de Ají Amarillo y Maracuyá",
+      "en": "Spicy Sweet Yellow Chili & Passion Fruit Sauce"
+    },
+    "description": {
+      "es": "Fusión picante y tropical: ají amarillo boliviano madurado al sol combinado con la acidez del maracuyá de los Yungas. Perfecta para carnes, empanadas y tablas de picadas.",
+      "en": "A signature fusion: sun-ripened Bolivian yellow chili combined with tropical passion fruit pulp. Perfect for roast meats, empanadas, and charcuterie."
+    },
+    "category": "salsas",
+    "price_bob": 38.00,
+    "price_usd": 5.46,
+    "image": "assets/img/prod_salsa_aji_maracuya.png",
+    "stock": 35,
+    "weight_g": 250,
+    "badge": {
+      "es": "Fusión Gourmet",
+      "en": "Gourmet Fusion"
+    },
+    "ingredients": {
+      "es": "Pulpa de maracuyá, ají amarillo boliviano, vinagre de manzana, azúcar de caña, sal rosada.",
+      "en": "Passion fruit pulp, Bolivian yellow chili, apple cider vinegar, cane sugar, pink salt."
+    },
+    "supplier": "Taller Gastronómico Kaphi & Valle",
+    "dispatch_time_days": 2
+  },
+  {
+    "id": "prod-06",
+    "name": {
+      "es": "Dulce Tradicional de Guayaba en Barra",
+      "en": "Traditional Guava Fruit Paste (Bocadillo)"
+    },
+    "description": {
+      "es": "Pasta artesanal densa de guayaba madura, elaborada en pailas de cobre según la costumbre ancestral. Corte perfecto para servir con quesillo andino.",
+      "en": "Artisan dense guava paste cooked in copper kettles following ancestral methods. Slices smoothly, ideal paired with fresh Andean curd cheese."
+    },
+    "category": "dulces",
+    "price_bob": 25.00,
+    "price_usd": 3.59,
+    "image": "assets/img/prod_dulce_guayaba.png",
+    "stock": 40,
+    "weight_g": 350,
+    "badge": {
+      "es": "Sabor de Antaño",
+      "en": "Ancestral Recipe"
+    },
+    "ingredients": {
+      "es": "Pulpa concentrada de guayaba silvestre (80%), azúcar de caña.",
+      "en": "Concentrated wild guava pulp (80%), cane sugar."
+    },
+    "supplier": "Recolectores de Guayaba de los Yungas / Kaphi & Valle",
+    "dispatch_time_days": 1
+  },
+  {
+    "id": "prod-07",
+    "name": {
+      "es": "Pack de Regalo Degustación Andino-Valle",
+      "en": "Andean-Valley Tasting Gift Box"
+    },
+    "description": {
+      "es": "Caja de madera artesanal rústica que incluye: 1 Mermelada de Frutilla (320g), 1 Miel Pura de Abeja (500g), 1 Jalea de Membrillo (300g) y cuchara de madera tallada a mano.",
+      "en": "Rustic handmade wooden box featuring: 1 Strawberry Jam (320g), 1 Pure Wild Honey (500g), 1 Quince Jelly (300g), and a hand-carved wooden tasting spoon."
+    },
+    "category": "packs",
+    "price_bob": 120.00,
+    "price_usd": 17.24,
+    "image": "assets/img/prod_pack_regalo.png",
+    "stock": 15,
+    "weight_g": 1350,
+    "badge": {
+      "es": "Edición Especial",
+      "en": "Gift Collection"
+    },
+    "ingredients": {
+      "es": "Set completo de 3 frascos artesanales en caja de madera de pino boliviano con lazo de yute.",
+      "en": "Complete 3-jar artisanal collection presented in a Bolivian pine wood crate with jute bow."
+    },
+    "supplier": "Kaphi & Valle Artesanos & Ebanistas Locales",
+    "dispatch_time_days": 3
+  }
+]

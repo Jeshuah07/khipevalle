@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Compra | KAPHI & VALLE S.R.L.</title>
+  
+  <meta name="description" content="Completa tu pedido de forma segura en Kaphi & Valle con PayPal o QR Bancario de Bolivia.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-notice">
+        <span data-i18n="topbar.notice">🇧🇴 Hecho en Bolivia | Envíos a todo el país y el mundo</span>
+      </div>
+      <div class="top-bar-controls">
+        <div class="switcher-group" aria-label="Selector de Idioma">
+          <button type="button" class="switcher-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="switcher-btn" data-set-lang="en">EN</button>
+        </div>
+        <div class="switcher-group" aria-label="Selector de Moneda">
+          <button type="button" class="switcher-btn active" data-set-curr="BOB">Bs (BOB)</button>
+          <button type="button" class="switcher-btn" data-set-curr="USD">$ (USD)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo.png" alt="Logotipo KAPHI & VALLE" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-title">KAPHI & VALLE</span>
+          <span class="brand-subtitle">INDUSTRIAS S.R.L.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+        <a href="tienda.html" class="nav-link" data-i18n="nav.shop">Tienda</a>
+        <a href="nosotros.html" class="nav-link" data-i18n="nav.about">Nosotros</a>
+        <a href="envios.html" class="nav-link" data-i18n="nav.shipping">Envíos</a>
+        <a href="contacto.html" class="nav-link" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="carrito.html" class="btn btn-outline btn-sm">
+          ← Volver al Carrito
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container checkout-layout">
+    <div style="margin-bottom: var(--spacing-8);">
+      <h1 data-i18n="checkout.title">Finalizar Pedido</h1>
+      <p class="lead" data-i18n="checkout.subtitle">Completa tus datos para despachar tus productos artesanales</p>
+    </div>
+
+    <div class="checkout-grid">
+      <!-- Columna Izquierda: Pasos de Checkout -->
+      <div>
+        <!-- PASO 1: DATOS DE CONTACTO Y ENVÍO -->
+        <div class="checkout-step">
+          <h2 class="checkout-step-title" style="font-size: 1.25rem;">
+            <span class="step-number">1</span>
+            <span data-i18n="checkout.step1_title">Datos de Contacto y Envío</span>
+          </h2>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cust-name" class="form-label">
+                <span data-i18n="checkout.name_label">Nombre y Apellido:</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="cust-name" class="form-control" placeholder="Ej. Juan Pérez" required>
+              <div class="form-error">Por favor ingresa tu nombre completo.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="cust-email" class="form-label">
+                <span data-i18n="checkout.email_label">Correo Electrónico:</span> <span class="required">*</span>
+              </label>
+              <input type="email" id="cust-email" class="form-control" placeholder="tucorreo@ejemplo.com" required>
+              <div class="form-error">Ingresa un correo electrónico válido.</div>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cust-phone" class="form-label">
+                <span data-i18n="checkout.phone_label">Teléfono / WhatsApp:</span> <span class="required">*</span>
+              </label>
+              <input type="tel" id="cust-phone" class="form-control" placeholder="+591 73669959" required>
+              <div class="form-error">Ingresa tu número de contacto para coordinar la entrega.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="checkout-country" class="form-label">
+                <span data-i18n="checkout.country_label">País de Destino:</span> <span class="required">*</span>
+              </label>
+              <select id="checkout-country" class="form-control">
+                <option value="BO" selected>🇧🇴 Bolivia (Nacional)</option>
+                <option value="US">🇺🇸 Estados Unidos</option>
+                <option value="ES">🇪🇸 España</option>
+                <option value="CL">🇨🇱 Chile</option>
+                <option value="PE">🇵🇪 Perú</option>
+                <option value="AR">🇦🇷 Argentina</option>
+                <option value="OTHER">🌐 Otro país (Internacional)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cust-city" class="form-label">
+                <span data-i18n="checkout.city_label">Ciudad:</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="cust-city" class="form-control" placeholder="Ej. Cochabamba, La Paz, Santa Cruz..." required>
+              <div class="form-error">Ingresa tu ciudad de residencia.</div>
+            </div>
+
+            <div class="form-group">
+              <label for="cust-address" class="form-label">
+                <span data-i18n="checkout.address_label">Dirección exacta y referencias:</span> <span class="required">*</span>
+              </label>
+              <input type="text" id="cust-address" class="form-control" placeholder="Calle, número de casa, zona o edificio" required>
+              <div class="form-error">Ingresa tu dirección de entrega.</div>
+            </div>
+          </div>
+
+          <div class="form-group" style="margin-bottom: 0;">
+            <label for="cust-notes" class="form-label" data-i18n="checkout.notes_label">Instrucciones de entrega (opcional):</label>
+            <textarea id="cust-notes" class="form-control" rows="2" placeholder="Indicaciones para el repartidor o detalles de empaque para regalo..."></textarea>
+          </div>
+        </div>
+
+        <!-- PASO 2: MÉTODO DE ENVÍO -->
+        <div class="checkout-step">
+          <h2 class="checkout-step-title" style="font-size: 1.25rem;">
+            <span class="step-number">2</span>
+            <span data-i18n="checkout.step2_title">Método de Envío</span>
+          </h2>
+
+          <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+            <!-- Envío Nacional -->
+            <label style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; background: #ffffff;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <input type="radio" name="shipping_option" id="ship-national" value="national" checked>
+                <div>
+                  <div style="font-weight: 700; color: var(--color-brand-navy-dark);" data-i18n="checkout.ship_national">
+                    Envío Nacional (Bolivia - 24 a 48h)
+                  </div>
+                  <div style="font-size: 0.75rem; color: #64748b;">La Paz, Cochabamba, Santa Cruz y todas las capitales</div>
+                </div>
+              </div>
+              <strong style="color: var(--color-brand-amber);">Bs 25.00 ($ 3.59 USD)</strong>
+            </label>
+
+            <!-- Envío Internacional -->
+            <label style="display: flex; align-items: center; justify-content: space-between; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; background: #ffffff;">
+              <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <input type="radio" name="shipping_option" id="ship-international" value="international">
+                <div>
+                  <div style="font-weight: 700; color: var(--color-brand-navy-dark);" data-i18n="checkout.ship_international">
+                    Envío Internacional (DHL / FedEx Express)
+                  </div>
+                  <div style="font-size: 0.75rem; color: #64748b;">5 a 8 días hábiles con seguimiento puerta a puerta</div>
+                </div>
+              </div>
+              <strong style="color: var(--color-brand-amber);">$ 25.00 USD (Bs 174.00)</strong>
+            </label>
+          </div>
+        </div>
+
+        <!-- PASO 3: FORMA DE PAGO MODULAR -->
+        <div class="checkout-step">
+          <h2 class="checkout-step-title" style="font-size: 1.25rem;">
+            <span class="step-number">3</span>
+            <span data-i18n="checkout.step3_title">Forma de Pago</span>
+          </h2>
+
+          <!-- Pestañas de selección -->
+          <div class="payment-tab-buttons">
+            <button type="button" class="payment-tab-btn active" id="tab-btn-qr">
+              <span style="font-size: 1.5rem;">📱</span>
+              <span data-i18n="checkout.pay_method_qr">QR Bancario / Transferencia (Bolivia)</span>
+              <small style="font-weight: normal; font-size: 0.75rem; color: #64748b;">En Bolivianos (Bs)</small>
+            </button>
+
+            <button type="button" class="payment-tab-btn" id="tab-btn-paypal">
+              <span style="font-size: 1.5rem;">🌐</span>
+              <span data-i18n="checkout.pay_method_paypal">PayPal (Internacional / Tarjeta)</span>
+              <small style="font-weight: normal; font-size: 0.75rem; color: #64748b;">En Dólares (USD)</small>
+            </button>
+          </div>
+
+          <!-- PANEL 1: QR BANCO (ACTIVO POR DEFECTO PARA BOLIVIA) -->
+          <div class="payment-panel active" id="panel-qr">
+            <div id="qr-payment-container">
+              <!-- Renderizado por js/payments/qr-transfer.js -->
+            </div>
+          </div>
+
+          <!-- PANEL 2: PAYPAL SDK BUTTONS (SANDBOX) -->
+          <div class="payment-panel" id="panel-paypal">
+            <div style="background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: var(--radius-md); padding: 1rem; margin-bottom: 1.25rem; font-size: 0.85rem; color: #166534;">
+              🛡️ <strong>Pago Seguro Internacional:</strong> Serás procesado por la pasarela global de PayPal. El cobro se liquidará automáticamente en USD según el tipo de cambio oficial del día.
+            </div>
+
+            <!-- Contenedor oficial donde PayPal SDK inyecta los Smart Buttons -->
+            <div id="paypal-buttons-container" style="min-height: 150px;">
+              <!-- Cargado dinámicamente -->
+            </div>
+
+            <p style="text-align: center; font-size: 0.75rem; color: #94a3b8; margin-top: 1rem;">
+              Entorno: <strong>PayPal Sandbox (Modo Académico / Demostración)</strong>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Resumen Flotante del Pedido -->
+      <div>
+        <div class="cart-summary-box">
+          <h3 style="margin-bottom: 1rem; font-size: 1.2rem;" data-i18n="checkout.order_summary_title">Resumen del Pedido</h3>
+
+          <div id="checkout-items-list" style="max-height: 260px; overflow-y: auto; margin-bottom: 1rem; border-bottom: 1px solid var(--color-border); padding-bottom: 0.5rem;">
+            <!-- Rellenado dinámicamente -->
+          </div>
+
+          <div class="summary-row">
+            <span data-i18n="checkout.subtotal_label">Subtotal de productos:</span>
+            <strong id="summary-subtotal-val">Bs 0.00</strong>
+          </div>
+
+          <div class="summary-row">
+            <span data-i18n="checkout.shipping_cost_label">Costo de envío:</span>
+            <strong id="summary-shipping-val">Bs 25.00</strong>
+          </div>
+
+          <div class="summary-total">
+            <span data-i18n="checkout.total_label">Total a pagar:</span>
+            <span id="summary-total-val" style="color: var(--color-brand-amber);">Bs 0.00</span>
+          </div>
+
+          <div id="summary-total-dual" style="text-align: right; font-size: 0.8rem; color: #64748b; margin-top: 0.25rem;">
+            <!-- Equivalente en USD/Bs -->
+          </div>
+
+          <div style="background: var(--color-bg-alt); padding: 0.75rem; border-radius: var(--radius-md); margin-top: 1.5rem; font-size: 0.75rem; color: #64748b; line-height: 1.4;">
+            🔒 <strong>Compra 100% Segura:</strong> Tus datos están protegidos. No almacenamos tarjetas ni claves bancarias en este sitio web.
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> — <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+        </div>
+        <div class="footer-badges">
+          <span class="badge badge-navy">QR Simple 🇧🇴</span>
+          <span class="badge badge-navy">PayPal 🌐</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module" src="js/checkout.js"></script>
+</body>
+</html>
+

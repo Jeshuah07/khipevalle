@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos | KAPHI & VALLE S.R.L.</title>
+  
+  <meta name="description" content="Explora nuestro catálogo artesanal de mermeladas de fruta, miel pura de abeja, frutas deshidratadas y salsas agridulces hechas en Bolivia.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-notice">
+        <span data-i18n="topbar.notice">🇧🇴 Hecho en Bolivia | Envíos a todo el país y el mundo</span>
+      </div>
+      <div class="top-bar-controls">
+        <div class="switcher-group" aria-label="Selector de Idioma">
+          <button type="button" class="switcher-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="switcher-btn" data-set-lang="en">EN</button>
+        </div>
+        <div class="switcher-group" aria-label="Selector de Moneda">
+          <button type="button" class="switcher-btn active" data-set-curr="BOB">Bs (BOB)</button>
+          <button type="button" class="switcher-btn" data-set-curr="USD">$ (USD)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo.png" alt="Logotipo KAPHI & VALLE" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-title">KAPHI & VALLE</span>
+          <span class="brand-subtitle">INDUSTRIAS S.R.L.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+        <a href="tienda.html" class="nav-link active" data-i18n="nav.shop">Tienda</a>
+        <a href="nosotros.html" class="nav-link" data-i18n="nav.about">Nosotros</a>
+        <a href="envios.html" class="nav-link" data-i18n="nav.shipping">Envíos</a>
+        <a href="contacto.html" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <a href="ebook.html" class="nav-link" data-i18n="nav.ebook">E-Book</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-button-link">
+          <span>🛒</span>
+          <span data-i18n="nav.cart">Carrito</span>
+          <span class="cart-counter-badge">0</span>
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- ENCABEZADO DE CATÁLOGO -->
+    <section class="catalog-header">
+      <div class="container">
+        <span class="badge badge-bolivia" style="margin-bottom: 0.75rem;">100% Producción Nacional</span>
+        <h1 data-i18n="shop.title">Catálogo de Productos</h1>
+        <p class="lead" style="color: #cbd5e1; max-width: 600px; margin: 0 auto;" data-i18n="shop.subtitle">
+          Descubre nuestra selección de mermeladas, miel y derivados frutales
+        </p>
+      </div>
+    </section>
+
+    <!-- ÁREA DE PRODUCTOS Y HERRAMIENTAS -->
+    <section class="container catalog-layout">
+      <!-- BARRA DE BÚSQUEDA Y FILTROS -->
+      <div class="catalog-toolbar">
+        <!-- Buscador -->
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="search" id="product-search" placeholder="Buscar por nombre o sabor..." data-i18n-placeholder="shop.search_placeholder" aria-label="Buscar producto">
+        </div>
+
+        <!-- Filtros de Categorías -->
+        <div class="filter-categories" id="category-filters" role="group" aria-label="Filtrar por categoría">
+          <button type="button" class="category-pill active" data-category="all" data-i18n="shop.category_all">Todos los Productos</button>
+          <button type="button" class="category-pill" data-category="mermeladas">Mermeladas</button>
+          <button type="button" class="category-pill" data-category="miel">Miel Pura</button>
+          <button type="button" class="category-pill" data-category="deshidratados">Deshidratados</button>
+          <button type="button" class="category-pill" data-category="jaleas">Jaleas</button>
+          <button type="button" class="category-pill" data-category="salsas">Salsas Agridulces</button>
+          <button type="button" class="category-pill" data-category="dulces">Dulces de Fruta</button>
+          <button type="button" class="category-pill" data-category="packs">Packs de Regalo</button>
+        </div>
+
+        <!-- Ordenamiento -->
+        <div style="display: flex; align-items: center; gap: 0.5rem;">
+          <label for="sort-select" style="font-size: 0.85rem; font-weight: 700;" data-i18n="shop.sort_label">Ordenar:</label>
+          <select id="sort-select" class="form-control" style="width: auto; padding: 0.4rem 0.8rem; font-size: 0.85rem;">
+            <option value="default" data-i18n="shop.sort_default">Recomendados</option>
+            <option value="price_asc" data-i18n="shop.sort_price_asc">Precio: Menor a Mayor</option>
+            <option value="price_desc" data-i18n="shop.sort_price_desc">Precio: Mayor a Menor</option>
+            <option value="name_asc" data-i18n="shop.sort_name_asc">Nombre: A - Z</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Conteo de resultados -->
+      <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+        <span id="results-count" style="font-size: 0.875rem; color: #64748b; font-weight: 600;">Cargando catálogo...</span>
+      </div>
+
+      <!-- GRID DE PRODUCTOS -->
+      <div class="products-grid" id="catalog-products-grid">
+        <!-- Render dinámico -->
+      </div>
+
+      <!-- MENSAJE SIN RESULTADOS -->
+      <div id="no-products-msg" style="display: none; text-align: center; padding: 4rem 1rem; background: #ffffff; border-radius: var(--radius-lg); border: 1px dashed var(--color-border);">
+        <span style="font-size: 3rem; display: block; margin-bottom: 1rem;">🔍</span>
+        <h3 style="margin-bottom: 0.5rem;" data-i18n="shop.no_results">No se encontraron productos que coincidan con tu búsqueda.</h3>
+        <p class="text-muted">Prueba buscando otro sabor o seleccionando la categoría "Todos los Productos".</p>
+        <button type="button" class="btn btn-outline" id="btn-reset-filters" style="margin-top: 1rem;">Restablecer Filtros</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="assets/img/logo.png" alt="Logo" style="height: 48px; border-radius: 50%; border: 2px solid var(--color-brand-amber);">
+            <div>
+              <div style="color: #ffffff; font-weight: 800; font-size: 1.1rem;">KAPHI & VALLE</div>
+              <div style="color: var(--color-brand-amber); font-size: 0.7rem; font-weight: 700;">INDUSTRIAS S.R.L.</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer.about_desc">
+            Empresa boliviana dedicada a la transformación artesanal de frutas de los valles andinos. Calidad de exportación, respeto por el medio ambiente y orgullo nacional.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.links_title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="tienda.html" data-i18n="nav.shop">Tienda Virtual</a></li>
+            <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="envios.html" data-i18n="nav.shipping">Envíos</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.customer_title">Atención</h4>
+          <ul class="footer-links">
+            <li><a href="envios.html" data-i18n="nav.shipping">Políticas de Envío</a></li>
+            <li><a href="checkout.html">Pasarela de Pagos</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contacto Directo</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.contact_title">Contacto</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <div>Av. Melchor Pérez de Olguín #450, Cochabamba, Bolivia</div>
+          </div>
+          <div class="footer-contact-item">
+            <span>💬</span>
+            <div>WhatsApp: +591 73669959</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="https://wa.me/59173669959?text=Hola%20Kaphi%20y%20Valle,%20deseo%20hacer%20un%20pedido" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+              Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> — <span data-i18n="footer.rights">Todos los derechos reservados. Fabricado con orgullo en Bolivia.</span>
+        </div>
+        <div class="footer-badges">
+          <span class="badge badge-navy">QR Simple 🇧🇴</span>
+          <span class="badge badge-navy">PayPal 🌐</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { getProducts, filterAndSortProducts, createProductCardHtml, bindAddToCartButtons } from './js/products.js';
+    import { onCurrencyChange } from './js/currency.js';
+    import { onLanguageChange, applyTranslations, getCurrentLanguage } from './js/i18n.js';
+
+    let allProducts = [];
+    let activeCategory = 'all';
+    let searchQuery = '';
+    let sortBy = 'default';
+
+    async function initCatalog() {
+      allProducts = await getProducts();
+      renderCatalog();
+
+      // Listeners de búsqueda
+      const searchInput = document.getElementById('product-search');
+      searchInput.addEventListener('input', (e) => {
+        searchQuery = e.target.value;
+        renderCatalog();
+      });
+
+      // Listeners de categoría
+      const categoryPills = document.querySelectorAll('.category-pill');
+      categoryPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          categoryPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+          activeCategory = pill.getAttribute('data-category');
+          renderCatalog();
+        });
+      });
+
+      // Listener de ordenamiento
+      const sortSelect = document.getElementById('sort-select');
+      sortSelect.addEventListener('change', (e) => {
+        sortBy = e.target.value;
+        renderCatalog();
+      });
+
+      // Botón reset
+      document.getElementById('btn-reset-filters').addEventListener('click', () => {
+        searchQuery = '';
+        searchInput.value = '';
+        activeCategory = 'all';
+        sortBy = 'default';
+        sortSelect.value = 'default';
+        categoryPills.forEach(p => p.classList.remove('active'));
+        categoryPills[0].classList.add('active');
+        renderCatalog();
+      });
+    }
+
+    function renderCatalog() {
+      const container = document.getElementById('catalog-products-grid');
+      const countEl = document.getElementById('results-count');
+      const noResultsEl = document.getElementById('no-products-msg');
+
+      const filtered = filterAndSortProducts(allProducts, {
+        category: activeCategory,
+        searchQuery,
+        sortBy
+      });
+
+      const lang = getCurrentLanguage();
+      countEl.textContent = lang === 'en' 
+        ? `Showing ${filtered.length} of ${allProducts.length} products`
+        : `Mostrando ${filtered.length} de ${allProducts.length} productos`;
+
+      if (filtered.length === 0) {
+        container.innerHTML = '';
+        noResultsEl.style.display = 'block';
+      } else {
+        noResultsEl.style.display = 'none';
+        container.innerHTML = filtered.map(p => createProductCardHtml(p)).join('');
+        bindAddToCartButtons(container);
+      }
+
+      applyTranslations();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initCatalog();
+      onCurrencyChange(() => renderCatalog());
+      onLanguageChange(() => renderCatalog());
+    });
+  </script>
+</body>
+</html>
+

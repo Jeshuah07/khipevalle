@@ -1,0 +1,311 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KAPHI & VALLE S.R.L. | Mermeladas y Derivados Artesanales - Hecho en Bolivia</title>
+  
+  <!-- SEO y Open Graph -->
+  <meta name="description" content="Tienda oficial de KAPHI & VALLE INDUSTRIAS S.R.L. Producción artesanal de mermeladas, miel pura, frutas deshidratadas y delicias bolivianas. Envíos nacionales e internacionales.">
+  <meta name="keywords" content="mermeladas bolivianas, miel pura cochabamba, frutas deshidratadas, hecho en bolivia, kaphi y valle, productos artesanales">
+  <meta name="author" content="KAPHI & VALLE INDUSTRIAS S.R.L.">
+  <meta property="og:title" content="KAPHI & VALLE S.R.L. | Sabor Artesanal Hecho en Bolivia">
+  <meta property="og:description" content="Mermeladas, miel y derivados frutales 100% naturales elaborados en los valles de Bolivia.">
+  <meta property="og:image" content="assets/img/logo.png">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Hojas de Estilos Modulares -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Saltar al contenido principal</a>
+
+  <!-- BARRA SUPERIOR (TOP BAR) -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-notice">
+        <span data-i18n="topbar.notice">🇧🇴 Hecho en Bolivia | Envíos a todo el país y el mundo</span>
+      </div>
+      <div class="top-bar-controls">
+        <!-- Switcher de Idioma -->
+        <div class="switcher-group" aria-label="Selector de Idioma">
+          <button type="button" class="switcher-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="switcher-btn" data-set-lang="en">EN</button>
+        </div>
+        <!-- Switcher de Moneda -->
+        <div class="switcher-group" aria-label="Selector de Moneda">
+          <button type="button" class="switcher-btn active" data-set-curr="BOB">Bs (BOB)</button>
+          <button type="button" class="switcher-btn" data-set-curr="USD">$ (USD)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVEGACIÓN PRINCIPAL -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link" aria-label="KAPHI & VALLE - Ir al inicio">
+        <img src="assets/img/logo.png" alt="Logotipo KAPHI & VALLE" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-title">KAPHI & VALLE</span>
+          <span class="brand-subtitle">INDUSTRIAS S.R.L.</span>
+        </div>
+      </a>
+
+      <!-- Menú Desktop / Móvil -->
+      <nav class="main-nav" id="main-navigation" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link active" data-i18n="nav.home">Inicio</a>
+        <a href="tienda.html" class="nav-link" data-i18n="nav.shop">Tienda</a>
+        <a href="nosotros.html" class="nav-link" data-i18n="nav.about">Nosotros</a>
+        <a href="envios.html" class="nav-link" data-i18n="nav.shipping">Envíos</a>
+        <a href="contacto.html" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <a href="ebook.html" class="nav-link" data-i18n="nav.ebook">E-Book</a>
+      </nav>
+
+      <!-- Acciones de Carrito y Toggle Móvil -->
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-button-link" id="cart-nav-btn" aria-label="Ver carrito">
+          <span>🛒</span>
+          <span class="cart-label" data-i18n="nav.cart">Carrito</span>
+          <span class="cart-counter-badge" id="cart-badge">0</span>
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-expanded="false" aria-controls="main-navigation" aria-label="Abrir menú de navegación">
+          ☰
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- SECCIÓN HERO -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge badge-bolivia" style="margin-bottom: 1.25rem;" data-i18n="hero.badge">Frutas Seleccionadas de Bolivia</span>
+          <h1 class="hero-title">
+            <span data-i18n="hero.title_part1">Sabor Artesanal de Altura y</span> <br>
+            <span class="highlight" data-i18n="hero.title_highlight">Frutas de los Valles</span>
+          </h1>
+          <p class="hero-desc" data-i18n="hero.desc">
+            Elaboramos mermeladas, miel pura y derivados de fruta con recetas tradicionales bolivianas, sin conservantes artificiales y con el alma de nuestra tierra.
+          </p>
+          <div class="hero-actions">
+            <a href="tienda.html" class="btn btn-primary btn-lg" data-i18n="hero.btn_catalog">Explorar Catálogo</a>
+            <a href="nosotros.html" class="btn btn-outline" style="color: #ffffff; border-color: rgba(255,255,255,0.3);" data-i18n="hero.btn_about">Nuestra Historia</a>
+          </div>
+        </div>
+        <div class="hero-image-box">
+          <div class="hero-main-card">
+            <img src="assets/img/prod_mermelada_frutilla.png" alt="Mermelada de Frutilla Kaphi & Valle" style="border-radius: var(--radius-lg); margin-bottom: 1rem; width: 100%; box-shadow: var(--shadow-md);">
+            <h3 style="color: #ffffff; font-size: 1.15rem; margin-bottom: 0.25rem;" data-i18n="hero.card_title">100% Natural y Boliviano</h3>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin: 0;" data-i18n="hero.card_desc">Cultivado en los valles, transformado con orgullo nacional.</p>
+          </div>
+          <div class="hero-badge-float">
+            <span style="font-size: 1.5rem;">🏔️</span>
+            <div>
+              <div style="font-size: 0.75rem; color: #64748b; text-transform: uppercase;">Garantía de Origen</div>
+              <div style="font-weight: 800;">Hecho en Bolivia</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BARRA DE BENEFICIOS / CARACTERÍSTICAS -->
+    <section class="features-bar" aria-label="Nuestras ventajas">
+      <div class="container features-grid">
+        <div class="feature-item">
+          <div class="feature-icon">🍓</div>
+          <div>
+            <h4 class="feature-title" data-i18n="features.natural_title">100% Fruta Natural</h4>
+            <p class="feature-desc" data-i18n="features.natural_desc">Sin conservantes químicos ni colorantes artificiales.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🇧🇴</div>
+          <div>
+            <h4 class="feature-title" data-i18n="features.local_title">Hecho en Bolivia</h4>
+            <p class="feature-desc" data-i18n="features.local_desc">Apoyamos a familias agricultoras de los valles.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📦</div>
+          <div>
+            <h4 class="feature-title" data-i18n="features.delivery_title">Envíos Nacionales e Int.</h4>
+            <p class="feature-desc" data-i18n="features.delivery_desc">Entregas en 24-48h en Bolivia y vía DHL al exterior.</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">💳</div>
+          <div>
+            <h4 class="feature-title" data-i18n="features.payment_title">Pagos Seguros</h4>
+            <p class="feature-desc" data-i18n="features.payment_desc">QR Simple boliviano y PayPal internacional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PRODUCTOS DESTACADOS -->
+    <section class="container" style="padding: var(--spacing-16) var(--spacing-4);">
+      <div style="text-align: center; max-width: 650px; margin: 0 auto var(--spacing-10) auto;">
+        <span class="badge badge-bolivia" style="margin-bottom: 0.5rem;" data-i18n="topbar.notice">Nuestra Selección Artesanal</span>
+        <h2 style="font-size: var(--font-size-3xl);" data-i18n="shop.title">Catálogo de Productos</h2>
+        <p class="lead" data-i18n="shop.subtitle">Descubre nuestra selección de mermeladas, miel y derivados frutales</p>
+      </div>
+
+      <div class="products-grid" id="featured-products-grid">
+        <!-- Renderizado dinámicamente con JavaScript desde products.json -->
+      </div>
+
+      <div style="text-align: center; margin-top: var(--spacing-10);">
+        <a href="tienda.html" class="btn btn-secondary btn-lg" data-i18n="hero.btn_catalog">Ver Todo el Catálogo Completo →</a>
+      </div>
+    </section>
+
+    <!-- SECCIÓN HECHO EN BOLIVIA -->
+    <section class="bolivia-showcase">
+      <div class="container showcase-grid">
+        <div class="showcase-visual">
+          <img src="assets/img/prod_pack_regalo.png" alt="Producción artesanal Kaphi y Valle" style="width: 100%; height: 100%; object-fit: cover;">
+          <div class="showcase-badge">Tradición & Calidad</div>
+        </div>
+        <div class="showcase-info">
+          <span class="badge badge-bolivia" style="margin-bottom: 1rem;">Historia & Origen</span>
+          <h2>De los Valles Andinos Directo a tu Hogar</h2>
+          <p class="lead">
+            En <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> creemos en la riqueza de la tierra boliviana. 
+            Nuestra fruta es cosechada en su punto óptimo de maduración por productores campesinos locales.
+          </p>
+          <p>
+            Mediante una cocción lenta en pailas tradicionales preservamos los aromas y nutrientes esenciales. 
+            Cada frasco lleva consigo la calidez de nuestro valle y la calidad que nos permite llegar tanto a 
+            hogares bolivianos como a mesas internacionales.
+          </p>
+          <div style="display: flex; gap: var(--spacing-4); margin-top: var(--spacing-6);">
+            <a href="nosotros.html" class="btn btn-primary" data-i18n="hero.btn_about">Conoce Nuestro Proceso</a>
+            <a href="envios.html" class="btn btn-outline" data-i18n="nav.shipping">Información de Envíos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA (FOOTER) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Misión -->
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="assets/img/logo.png" alt="Logo" style="height: 48px; border-radius: 50%; border: 2px solid var(--color-brand-amber);">
+            <div>
+              <div style="color: #ffffff; font-weight: 800; font-size: 1.1rem;">KAPHI & VALLE</div>
+              <div style="color: var(--color-brand-amber); font-size: 0.7rem; font-weight: 700;">INDUSTRIAS S.R.L.</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer.about_desc">
+            Empresa boliviana dedicada a la transformación artesanal de frutas de los valles andinos. Calidad de exportación, respeto por el medio ambiente y orgullo nacional.
+          </p>
+          <div style="display: flex; gap: 0.75rem;">
+            <span class="badge badge-bolivia">🇧🇴 Hecho en Bolivia</span>
+          </div>
+        </div>
+
+        <!-- Columna 2: Navegación Rápida -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.links_title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="tienda.html" data-i18n="nav.shop">Tienda Virtual</a></li>
+            <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="ebook.html" data-i18n="nav.ebook">E-Book Artesanal</a></li>
+            <li><a href="carrito.html" data-i18n="nav.cart">Mi Carrito</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Información y Envíos -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.customer_title">Atención</h4>
+          <ul class="footer-links">
+            <li><a href="envios.html" data-i18n="nav.shipping">Políticas de Envío</a></li>
+            <li><a href="checkout.html">Pasarela de Pagos</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contacto & Soporte</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Contacto y Pagos -->
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.contact_title">Contacto Directo</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <div>Av. Melchor Pérez de Olguín #450, Cochabamba, Bolivia</div>
+          </div>
+          <div class="footer-contact-item">
+            <span>💬</span>
+            <div>WhatsApp: +591 73669959</div>
+          </div>
+          <div class="footer-contact-item">
+            <span>✉️</span>
+            <div>ventas@kaphivalle.com.bo</div>
+          </div>
+          <div style="margin-top: 1rem;">
+            <a href="https://wa.me/59173669959?text=Hola%20Kaphi%20y%20Valle,%20tengo%20una%20consulta" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+              Contactar por WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> — <span data-i18n="footer.rights">Todos los derechos reservados. Fabricado con orgullo en Bolivia.</span>
+        </div>
+        <div class="footer-badges">
+          <span style="color: #94a3b8; font-size: 0.75rem;">Métodos aceptados:</span>
+          <span class="badge badge-navy">QR Simple 🇧🇴</span>
+          <span class="badge badge-navy">PayPal 🌐</span>
+          <span class="badge badge-navy">BNB / Transferencia</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts Modular JS -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { getProducts, createProductCardHtml, bindAddToCartButtons } from './js/products.js';
+    import { onCurrencyChange } from './js/currency.js';
+    import { onLanguageChange, applyTranslations } from './js/i18n.js';
+
+    async function loadFeaturedProducts() {
+      const container = document.getElementById('featured-products-grid');
+      if (!container) return;
+      const products = await getProducts();
+      // Mostramos los primeros 4 o 6 productos en el Home
+      const featured = products.slice(0, 4);
+      container.innerHTML = featured.map(p => createProductCardHtml(p)).join('');
+      bindAddToCartButtons(container);
+      applyTranslations();
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadFeaturedProducts();
+      onCurrencyChange(() => loadFeaturedProducts());
+      onLanguageChange(() => loadFeaturedProducts());
+    });
+  </script>
+</body>
+</html>
+

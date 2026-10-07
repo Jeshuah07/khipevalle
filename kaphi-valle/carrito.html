@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de Compras | KAPHI & VALLE S.R.L.</title>
+  
+  <meta name="description" content="Revisa los productos en tu carrito de compras de Kaphi & Valle y continúa hacia el checkout seguro.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-notice">
+        <span data-i18n="topbar.notice">🇧🇴 Hecho en Bolivia | Envíos a todo el país y el mundo</span>
+      </div>
+      <div class="top-bar-controls">
+        <div class="switcher-group" aria-label="Selector de Idioma">
+          <button type="button" class="switcher-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="switcher-btn" data-set-lang="en">EN</button>
+        </div>
+        <div class="switcher-group" aria-label="Selector de Moneda">
+          <button type="button" class="switcher-btn active" data-set-curr="BOB">Bs (BOB)</button>
+          <button type="button" class="switcher-btn" data-set-curr="USD">$ (USD)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo.png" alt="Logotipo KAPHI & VALLE" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-title">KAPHI & VALLE</span>
+          <span class="brand-subtitle">INDUSTRIAS S.R.L.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+        <a href="tienda.html" class="nav-link" data-i18n="nav.shop">Tienda</a>
+        <a href="nosotros.html" class="nav-link" data-i18n="nav.about">Nosotros</a>
+        <a href="envios.html" class="nav-link" data-i18n="nav.shipping">Envíos</a>
+        <a href="contacto.html" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <a href="ebook.html" class="nav-link" data-i18n="nav.ebook">E-Book</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-button-link" style="background: var(--color-brand-amber);">
+          <span>🛒</span>
+          <span data-i18n="nav.cart">Carrito</span>
+          <span class="cart-counter-badge">0</span>
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container cart-layout">
+    <div style="margin-bottom: var(--spacing-8);">
+      <h1 data-i18n="cart.title">Tu Carrito de Compras</h1>
+    </div>
+
+    <!-- ESTADO CARRITO VACÍO -->
+    <div id="cart-empty-view" style="display: none; text-align: center; padding: 5rem 1rem; background: #ffffff; border-radius: var(--radius-xl); border: 1px dashed var(--color-border);">
+      <span style="font-size: 4rem; display: block; margin-bottom: 1rem;">🛒</span>
+      <h2 style="margin-bottom: 0.5rem;" data-i18n="cart.empty_title">Tu carrito está vacío</h2>
+      <p class="lead" style="max-width: 500px; margin: 0 auto 2rem auto;" data-i18n="cart.empty_desc">
+        Parece que aún no has agregado delicias de Kaphi & Valle a tu pedido.
+      </p>
+      <a href="tienda.html" class="btn btn-primary btn-lg" data-i18n="cart.explore_btn">Explorar Productos</a>
+    </div>
+
+    <!-- ESTADO CARRITO CON PRODUCTOS -->
+    <div id="cart-content-view" class="cart-grid">
+      <!-- Columna Izquierda: Tabla de Productos -->
+      <div>
+        <table class="cart-table">
+          <thead>
+            <tr>
+              <th data-i18n="cart.th_product">Producto</th>
+              <th data-i18n="cart.th_price">Precio</th>
+              <th data-i18n="cart.th_quantity">Cantidad</th>
+              <th data-i18n="cart.th_subtotal">Subtotal</th>
+              <th data-i18n="cart.th_actions">Eliminar</th>
+            </tr>
+          </thead>
+          <tbody id="cart-items-body">
+            <!-- Rellenado dinámicamente -->
+          </tbody>
+        </table>
+
+        <!-- Acciones secundarias del carrito -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1.5rem; flex-wrap: wrap; gap: 1rem;">
+          <a href="tienda.html" class="btn btn-outline" data-i18n="cart.continue_shopping">← Seguir Comprando</a>
+          <button type="button" class="btn btn-outline" id="btn-clear-cart" style="color: var(--color-danger); border-color: #fecaca;" data-i18n="cart.clear_cart">
+            🗑️ Vaciar Carrito
+          </button>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Resumen de Totales -->
+      <div>
+        <div class="cart-summary-box">
+          <h3 style="margin-bottom: 1.25rem; font-size: 1.25rem;" data-i18n="cart.summary_title">Resumen de tu Pedido</h3>
+
+          <div class="summary-row">
+            <span data-i18n="cart.subtotal">Subtotal:</span>
+            <strong id="cart-subtotal-val">Bs 0.00</strong>
+          </div>
+
+          <div class="summary-row">
+            <span data-i18n="cart.shipping_estimate">Envío estimado:</span>
+            <span style="font-size: 0.8rem; color: #64748b;" data-i18n="cart.shipping_note">(Se calcula en checkout)</span>
+          </div>
+
+          <div class="summary-total">
+            <span data-i18n="cart.total">Total Estimado:</span>
+            <span id="cart-total-val" style="color: var(--color-brand-amber);">Bs 0.00</span>
+          </div>
+
+          <p style="font-size: 0.75rem; color: #64748b; margin-top: 1rem; line-height: 1.4;">
+            * Los costos de envío nacional (Bolivia) o internacional (DHL) se seleccionarán en el paso final antes del pago.
+          </p>
+
+          <a href="checkout.html" class="btn btn-primary btn-lg btn-full" style="margin-top: 1.5rem;" data-i18n="cart.checkout_btn">
+            Proceder al Pago →
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> — <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+        </div>
+        <div class="footer-badges">
+          <span class="badge badge-navy">QR Simple 🇧🇴</span>
+          <span class="badge badge-navy">PayPal 🌐</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { getCart, updateQuantity, removeFromCart, clearCart, getCartSubtotalBob, onCartChange } from './js/cart.js';
+    import { formatPrice, onCurrencyChange } from './js/currency.js';
+    import { getCurrentLanguage, onLanguageChange, applyTranslations, t } from './js/i18n.js';
+    import { showToast } from './js/main.js';
+
+    function renderCartTable() {
+      const items = getCart();
+      const emptyView = document.getElementById('cart-empty-view');
+      const contentView = document.getElementById('cart-content-view');
+      const tbody = document.getElementById('cart-items-body');
+
+      if (!items || items.length === 0) {
+        emptyView.style.display = 'block';
+        contentView.style.display = 'none';
+        return;
+      }
+
+      emptyView.style.display = 'none';
+      contentView.style.display = 'grid';
+
+      const lang = getCurrentLanguage();
+
+      tbody.innerHTML = items.map(item => {
+        const name = (typeof item.name === 'object') ? (item.name[lang] || item.name.es) : item.name;
+        const priceFormatted = formatPrice(item.price_bob);
+        const subtotalFormatted = formatPrice(item.price_bob * item.quantity);
+
+        return `
+          <tr>
+            <td>
+              <div class="cart-item-preview">
+                <img src="${item.image}" alt="${name}" class="cart-item-img" onerror="this.src='assets/img/logo.png'">
+                <div>
+                  <a href="producto.html?id=${item.id}" style="font-weight: 700; color: var(--color-brand-navy-dark);">
+                    ${name}
+                  </a>
+                  <div style="font-size: 0.75rem; color: #64748b;">${item.weight_g}g</div>
+                </div>
+              </div>
+            </td>
+            <td><strong>${priceFormatted}</strong></td>
+            <td>
+              <div class="quantity-control" style="transform: scale(0.9); transform-origin: left center;">
+                <button type="button" class="quantity-btn btn-cart-minus" data-id="${item.id}" aria-label="Restar">−</button>
+                <input type="text" class="quantity-input" value="${item.quantity}" readonly>
+                <button type="button" class="quantity-btn btn-cart-plus" data-id="${item.id}" aria-label="Sumar">+</button>
+              </div>
+            </td>
+            <td><strong style="color: var(--color-brand-amber);">${subtotalFormatted}</strong></td>
+            <td>
+              <button type="button" class="btn btn-outline btn-sm btn-cart-remove" data-id="${item.id}" title="Eliminar ítem" style="color: var(--color-danger); border: none; font-size: 1.1rem;">
+                ✕
+              </button>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      // Actualizar totales en resumen
+      const subtotalBob = getCartSubtotalBob();
+      document.getElementById('cart-subtotal-val').textContent = formatPrice(subtotalBob);
+      document.getElementById('cart-total-val').textContent = formatPrice(subtotalBob);
+
+      bindCartItemEvents();
+      applyTranslations();
+    }
+
+    function bindCartItemEvents() {
+      // Botones menos
+      document.querySelectorAll('.btn-cart-minus').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          const current = getCart().find(i => i.id === id);
+          if (current) {
+            updateQuantity(id, current.quantity - 1);
+          }
+        });
+      });
+
+      // Botones más
+      document.querySelectorAll('.btn-cart-plus').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          const current = getCart().find(i => i.id === id);
+          if (current) {
+            updateQuantity(id, current.quantity + 1);
+          }
+        });
+      });
+
+      // Botones eliminar
+      document.querySelectorAll('.btn-cart-remove').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const id = btn.getAttribute('data-id');
+          removeFromCart(id);
+          showToast('Producto eliminado del carrito', 'info');
+        });
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      renderCartTable();
+
+      // Vaciar carrito
+      document.getElementById('btn-clear-cart').addEventListener('click', () => {
+        if (confirm(t('cart.confirm_clear', '¿Estás seguro de que deseas vaciar tu carrito?'))) {
+          clearCart();
+          showToast('Carrito vaciado', 'info');
+        }
+      });
+
+      // Escuchar cambios reactivos
+      onCartChange(() => renderCartTable());
+      onCurrencyChange(() => renderCartTable());
+      onLanguageChange(() => renderCartTable());
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto y Atención al Cliente | KAPHI & VALLE S.R.L.</title>
+  
+  <meta name="description" content="Ponte en contacto con KAPHI & VALLE INDUSTRIAS S.R.L. Envíanos un mensaje, escríbenos por WhatsApp o visita nuestras instalaciones en Cochabamba, Bolivia.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-notice">
+        <span data-i18n="topbar.notice">🇧🇴 Hecho en Bolivia | Envíos a todo el país y el mundo</span>
+      </div>
+      <div class="top-bar-controls">
+        <div class="switcher-group">
+          <button type="button" class="switcher-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="switcher-btn" data-set-lang="en">EN</button>
+        </div>
+        <div class="switcher-group">
+          <button type="button" class="switcher-btn active" data-set-curr="BOB">Bs (BOB)</button>
+          <button type="button" class="switcher-btn" data-set-curr="USD">$ (USD)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo.png" alt="Logotipo KAPHI & VALLE" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-title">KAPHI & VALLE</span>
+          <span class="brand-subtitle">INDUSTRIAS S.R.L.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+        <a href="tienda.html" class="nav-link" data-i18n="nav.shop">Tienda</a>
+        <a href="nosotros.html" class="nav-link" data-i18n="nav.about">Nosotros</a>
+        <a href="envios.html" class="nav-link" data-i18n="nav.shipping">Envíos</a>
+        <a href="contacto.html" class="nav-link active" data-i18n="nav.contact">Contacto</a>
+        <a href="ebook.html" class="nav-link" data-i18n="nav.ebook">E-Book</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-button-link">
+          <span>🛒</span>
+          <span data-i18n="nav.cart">Carrito</span>
+          <span class="cart-counter-badge">0</span>
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="catalog-header">
+      <div class="container">
+        <span class="badge badge-bolivia" style="margin-bottom: 0.75rem;">Canales Oficiales</span>
+        <h1>Estamos a tu Servicio</h1>
+        <p class="lead" style="color: #cbd5e1; max-width: 600px; margin: 0 auto;">
+          ¿Tienes dudas sobre nuestros productos, pedidos al por mayor o envíos internacionales? Escríbenos directamente.
+        </p>
+      </div>
+    </section>
+
+    <section class="container" style="padding: var(--spacing-16) var(--spacing-4);">
+      <div style="display: grid; grid-template-columns: 1.2fr 0.8fr; gap: var(--spacing-12); align-items: start;">
+        
+        <!-- Formulario de Contacto -->
+        <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--spacing-8); box-shadow: var(--shadow-md);">
+          <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem;">Envíanos un Mensaje</h2>
+          <p class="text-muted" style="margin-bottom: 2rem;">Respondemos en menos de 2 horas hábiles.</p>
+
+          <form id="contact-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Nombre y Apellido: <span class="required">*</span></label>
+                <input type="text" id="contact-name" class="form-control" placeholder="Tu nombre" required>
+              </div>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Correo Electrónico: <span class="required">*</span></label>
+                <input type="email" id="contact-email" class="form-control" placeholder="tu@correo.com" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-phone" class="form-label">Teléfono / WhatsApp:</label>
+                <input type="tel" id="contact-phone" class="form-control" placeholder="+591 73669959">
+              </div>
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Motivo de Contacto:</label>
+                <select id="contact-subject" class="form-control">
+                  <option value="consulta">Consulta sobre productos</option>
+                  <option value="mayorista">Venta mayorista / Distribuidores</option>
+                  <option value="envios">Estado de mi envío</option>
+                  <option value="otro">Otro motivo</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contact-message" class="form-label">Mensaje: <span class="required">*</span></label>
+              <textarea id="contact-message" class="form-control" rows="4" placeholder="Escribe tu consulta o requerimiento aquí..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" id="btn-submit-contact">
+              ✉️ Enviar Mensaje
+            </button>
+          </form>
+
+          <!-- Mensaje de éxito tras envío -->
+          <div id="contact-success-msg" style="display: none; margin-top: 1.5rem;" class="alert alert-success">
+            <div>
+              <strong>¡Mensaje recibido con éxito!</strong><br>
+              Nuestro equipo de atención al cliente de Kaphi & Valle te responderá a la brevedad posible.
+            </div>
+          </div>
+        </div>
+
+        <!-- Información de contacto directa y WhatsApp -->
+        <div>
+          <!-- Tarjeta de WhatsApp -->
+          <div style="background: #ffffff; border: 2px solid #25D366; border-radius: var(--radius-xl); padding: var(--spacing-6); box-shadow: var(--shadow-md); margin-bottom: var(--spacing-6); text-align: center;">
+            <div style="font-size: 3rem; margin-bottom: 0.5rem;">📲</div>
+            <h3 style="font-size: 1.3rem; margin-bottom: 0.5rem; color: #128C7E;">Atención Rápida por WhatsApp</h3>
+            <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.25rem;">
+              Chatea directamente con nuestro equipo de ventas para consultas inmediatas o comprobantes de pago.
+            </p>
+            <a href="https://wa.me/59173669959?text=Hola%20Kaphi%20y%20Valle,%20tengo%20una%20consulta%20desde%20la%20tienda%20web" target="_blank" rel="noopener" class="btn btn-whatsapp btn-lg btn-full">
+              Abrir Chat de WhatsApp
+            </a>
+          </div>
+
+          <!-- Ubicación y datos -->
+          <div style="background: #ffffff; border: 1px solid var(--color-border); border-radius: var(--radius-xl); padding: var(--spacing-6); box-shadow: var(--shadow-sm);">
+            <h3 style="font-size: 1.15rem; margin-bottom: 1.25rem;">Datos de la Empresa</h3>
+
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem;">
+              <span style="font-size: 1.25rem;">🏢</span>
+              <div>
+                <strong>Razón Social:</strong><br>
+                <span style="font-size: 0.9rem; color: #475569;">KAPHI & VALLE INDUSTRIAS S.R.L.</span><br>
+                <small style="color: #64748b;">NIT: 3849102018 | Matrícula SEPREC Vigente</small>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem;">
+              <span style="font-size: 1.25rem;">📍</span>
+              <div>
+                <strong>Dirección de Planta y Oficinas:</strong><br>
+                <span style="font-size: 0.9rem; color: #475569;">Av. Melchor Pérez de Olguín #450<br>Cochabamba, Bolivia</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem; margin-bottom: 1rem;">
+              <span style="font-size: 1.25rem;">⏰</span>
+              <div>
+                <strong>Horario de Atención:</strong><br>
+                <span style="font-size: 0.9rem; color: #475569;">Lunes a Viernes: 08:30 - 18:30<br>Sábados: 09:00 - 13:00</span>
+              </div>
+            </div>
+
+            <div style="display: flex; gap: 0.75rem;">
+              <span style="font-size: 1.25rem;">✉️</span>
+              <div>
+                <strong>Correo Oficial:</strong><br>
+                <span style="font-size: 0.9rem; color: #475569;">ventas@kaphivalle.com.bo</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> — <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+        </div>
+        <div class="footer-badges">
+          <span class="badge badge-navy">QR Simple 🇧🇴</span>
+          <span class="badge badge-navy">PayPal 🌐</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { showToast } from './js/main.js';
+
+    document.getElementById('contact-form')?.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const form = e.target;
+      const successMsg = document.getElementById('contact-success-msg');
+      
+      form.style.display = 'none';
+      if (successMsg) successMsg.style.display = 'block';
+      showToast('¡Mensaje enviado con éxito!', 'success');
+    });
+  </script>
+</body>
+</html>
+

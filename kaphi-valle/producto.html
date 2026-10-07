@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalle de Producto | KAPHI & VALLE S.R.L.</title>
+  
+  <meta name="description" content="Detalle de producto artesanal Kaphi & Valle. Calidad 100% boliviana de exportación.">
+  <link rel="icon" type="image/png" href="assets/img/logo.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-to-content">Saltar al contenido</a>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-notice">
+        <span data-i18n="topbar.notice">🇧🇴 Hecho en Bolivia | Envíos a todo el país y el mundo</span>
+      </div>
+      <div class="top-bar-controls">
+        <div class="switcher-group" aria-label="Selector de Idioma">
+          <button type="button" class="switcher-btn active" data-set-lang="es">ES</button>
+          <button type="button" class="switcher-btn" data-set-lang="en">EN</button>
+        </div>
+        <div class="switcher-group" aria-label="Selector de Moneda">
+          <button type="button" class="switcher-btn active" data-set-curr="BOB">Bs (BOB)</button>
+          <button type="button" class="switcher-btn" data-set-curr="USD">$ (USD)</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo.png" alt="Logotipo KAPHI & VALLE" class="brand-logo-img">
+        <div class="brand-logo-text">
+          <span class="brand-title">KAPHI & VALLE</span>
+          <span class="brand-subtitle">INDUSTRIAS S.R.L.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-navigation">
+        <a href="index.html" class="nav-link" data-i18n="nav.home">Inicio</a>
+        <a href="tienda.html" class="nav-link active" data-i18n="nav.shop">Tienda</a>
+        <a href="nosotros.html" class="nav-link" data-i18n="nav.about">Nosotros</a>
+        <a href="envios.html" class="nav-link" data-i18n="nav.shipping">Envíos</a>
+        <a href="contacto.html" class="nav-link" data-i18n="nav.contact">Contacto</a>
+        <a href="ebook.html" class="nav-link" data-i18n="nav.ebook">E-Book</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="carrito.html" class="cart-button-link">
+          <span>🛒</span>
+          <span data-i18n="nav.cart">Carrito</span>
+          <span class="cart-counter-badge">0</span>
+        </a>
+        <button type="button" class="mobile-nav-toggle" aria-expanded="false">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" class="container product-detail-layout">
+    <!-- Migas de pan / Botón de retorno -->
+    <div style="margin-bottom: var(--spacing-6);">
+      <a href="tienda.html" class="btn btn-outline btn-sm" data-i18n="product.back_to_shop">← Volver al Catálogo</a>
+    </div>
+
+    <!-- Contenedor del Detalle -->
+    <div id="product-detail-container">
+      <!-- Se carga dinámicamente con JS -->
+      <div style="text-align: center; padding: 4rem 1rem;">
+        <p class="lead">Cargando producto...</p>
+      </div>
+    </div>
+
+    <!-- Sugerencias / Productos Relacionados -->
+    <section style="margin-top: var(--spacing-16);">
+      <h3 style="margin-bottom: var(--spacing-6);" data-i18n="product.related_title">También te podría gustar</h3>
+      <div class="products-grid" id="related-products-grid">
+        <!-- Render dinámico -->
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+            <img src="assets/img/logo.png" alt="Logo" style="height: 48px; border-radius: 50%; border: 2px solid var(--color-brand-amber);">
+            <div>
+              <div style="color: #ffffff; font-weight: 800; font-size: 1.1rem;">KAPHI & VALLE</div>
+              <div style="color: var(--color-brand-amber); font-size: 0.7rem; font-weight: 700;">INDUSTRIAS S.R.L.</div>
+            </div>
+          </div>
+          <p class="footer-brand-desc" data-i18n="footer.about_desc">
+            Empresa boliviana dedicada a la transformación artesanal de frutas de los valles andinos. Calidad de exportación, respeto por el medio ambiente y orgullo nacional.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.links_title">Navegación</h4>
+          <ul class="footer-links">
+            <li><a href="index.html" data-i18n="nav.home">Inicio</a></li>
+            <li><a href="tienda.html" data-i18n="nav.shop">Tienda</a></li>
+            <li><a href="nosotros.html" data-i18n="nav.about">Nosotros</a></li>
+            <li><a href="envios.html" data-i18n="nav.shipping">Envíos</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.customer_title">Atención</h4>
+          <ul class="footer-links">
+            <li><a href="envios.html" data-i18n="nav.shipping">Políticas de Envío</a></li>
+            <li><a href="checkout.html">Pasarela de Pagos</a></li>
+            <li><a href="contacto.html" data-i18n="nav.contact">Contacto</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-heading" data-i18n="footer.contact_title">Contacto</h4>
+          <div class="footer-contact-item">
+            <span>📍</span>
+            <div>Av. Melchor Pérez de Olguín #450, Cochabamba, Bolivia</div>
+          </div>
+          <div class="footer-contact-item">
+            <span>💬</span>
+            <div>WhatsApp: +591 73669959</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> <strong>KAPHI & VALLE INDUSTRIAS S.R.L.</strong> — <span data-i18n="footer.rights">Todos los derechos reservados.</span>
+        </div>
+        <div class="footer-badges">
+          <span class="badge badge-navy">QR Simple 🇧🇴</span>
+          <span class="badge badge-navy">PayPal 🌐</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script type="module" src="js/main.js"></script>
+  <script type="module">
+    import { getProducts, getProductById, createProductCardHtml, bindAddToCartButtons } from './js/products.js';
+    import { formatPrice, formatDualPrice, onCurrencyChange } from './js/currency.js';
+    import { getCurrentLanguage, onLanguageChange, applyTranslations, t } from './js/i18n.js';
+    import { addToCart } from './js/cart.js';
+    import { showToast } from './js/main.js';
+
+    let currentProduct = null;
+
+    async function initProductPage() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const prodId = urlParams.get('id') || 'prod-01'; // Fallback al primer producto
+
+      currentProduct = await getProductById(prodId);
+      if (!currentProduct) {
+        document.getElementById('product-detail-container').innerHTML = `
+          <div class="alert alert-warning" style="text-align: center;">
+            <p>El producto solicitado no fue encontrado.</p>
+            <a href="tienda.html" class="btn btn-primary" style="margin-top: 1rem;">Ir al Catálogo</a>
+          </div>
+        `;
+        return;
+      }
+
+      renderProductDetail();
+      loadRelatedProducts();
+    }
+
+    function renderProductDetail() {
+      if (!currentProduct) return;
+      const lang = getCurrentLanguage();
+      const name = currentProduct.name[lang] || currentProduct.name.es;
+      const desc = currentProduct.description[lang] || currentProduct.description.es;
+      const ingredients = currentProduct.ingredients ? (currentProduct.ingredients[lang] || currentProduct.ingredients.es) : '';
+      const badgeText = currentProduct.badge ? (currentProduct.badge[lang] || currentProduct.badge.es) : 'Artesanal';
+      
+      const priceMain = formatPrice(currentProduct.price_bob);
+      const priceDual = formatDualPrice(currentProduct.price_bob);
+
+      // Actualizar título de la página
+      document.title = `${name} | KAPHI & VALLE S.R.L.`;
+
+      const container = document.getElementById('product-detail-container');
+      container.innerHTML = `
+        <div class="product-detail-grid">
+          <!-- Galería / Imagen -->
+          <div class="product-gallery-main">
+            <img src="${currentProduct.image}" alt="${name}" id="main-product-img">
+          </div>
+
+          <!-- Información y Compra -->
+          <div class="product-info-panel">
+            <div style="display: flex; gap: 0.5rem; margin-bottom: 0.75rem;">
+              <span class="badge badge-bolivia">${badgeText}</span>
+              <span class="badge badge-navy">🇧🇴 Hecho en Bolivia</span>
+            </div>
+
+            <h1 style="font-size: 2.2rem; line-height: 1.2;">${name}</h1>
+            <p style="color: var(--color-brand-amber); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;">
+              ${currentProduct.category} • ${currentProduct.weight_g}g
+            </p>
+
+            <div class="product-info-price">
+              <span class="price-big">${priceMain}</span>
+              <span class="price-alt">(${priceDual})</span>
+            </div>
+
+            <p class="lead" style="margin-bottom: 1.5rem;">${desc}</p>
+
+            <!-- Datos técnicos / Dropshipping preparado -->
+            <div style="background: var(--color-bg-alt); padding: 1rem; border-radius: var(--radius-md); font-size: 0.85rem; margin-bottom: 1.5rem; border-left: 3px solid var(--color-brand-amber);">
+              <div style="margin-bottom: 0.35rem;">
+                <strong>🌱 Origen / Productor:</strong> ${currentProduct.supplier || 'Valles de Bolivia - Kaphi & Valle'}
+              </div>
+              <div style="margin-bottom: 0.35rem;">
+                <strong>⏱️ Tiempo de despacho:</strong> ${currentProduct.dispatch_time_days || 2} días hábiles
+              </div>
+              <div>
+                <strong>📦 Stock disponible:</strong> ${currentProduct.stock} unidades en almacén
+              </div>
+            </div>
+
+            <!-- Selector de Cantidad y Botones de Compra -->
+            <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2rem;">
+              <div class="quantity-control">
+                <button type="button" class="quantity-btn" id="qty-minus" aria-label="Restar">−</button>
+                <input type="number" id="detail-qty" class="quantity-input" value="1" min="1" max="${currentProduct.stock}" readonly>
+                <button type="button" class="quantity-btn" id="qty-plus" aria-label="Sumar">+</button>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-lg" id="btn-add-detail" style="flex: 1; min-width: 200px;">
+                🛒 <span data-i18n="product.add_to_cart">Agregar al Carrito</span>
+              </button>
+              
+              <button type="button" class="btn btn-secondary btn-lg" id="btn-buy-now">
+                ⚡ <span data-i18n="product.buy_now">Comprar Ahora</span>
+              </button>
+            </div>
+
+            <!-- Acordeón / Pestañas de Información Adicional -->
+            <div style="border-top: 1px solid var(--color-border); padding-top: 1.5rem;">
+              <h4 style="margin-bottom: 0.5rem; font-size: 1rem;" data-i18n="product.details_tab">Ingredientes y Elaboración</h4>
+              <p style="font-size: 0.9rem; color: #64748b; margin-bottom: 1.25rem;">
+                ${ingredients || '100% ingredientes naturales bolivianos, sin conservantes químicos ni gluten.'}
+              </p>
+
+              <h4 style="margin-bottom: 0.5rem; font-size: 1rem;" data-i18n="product.shipping_tab">Envíos y Entregas</h4>
+              <p style="font-size: 0.9rem; color: #64748b; margin: 0;">
+                Envíos a toda Bolivia en 24-48 horas hábiles. Envíos internacionales garantizados vía DHL Express con embalaje térmico especial para alimentos.
+              </p>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Eventos de cantidad
+      const qtyInput = document.getElementById('detail-qty');
+      document.getElementById('qty-minus').addEventListener('click', () => {
+        let val = parseInt(qtyInput.value, 10) || 1;
+        if (val > 1) qtyInput.value = val - 1;
+      });
+      document.getElementById('qty-plus').addEventListener('click', () => {
+        let val = parseInt(qtyInput.value, 10) || 1;
+        if (val < currentProduct.stock) qtyInput.value = val + 1;
+      });
+
+      // Evento Agregar al Carrito
+      document.getElementById('btn-add-detail').addEventListener('click', () => {
+        const qty = parseInt(qtyInput.value, 10) || 1;
+        addToCart(currentProduct, qty);
+        showToast(`¡Se agregaron ${qty} unidad(es) de ${name} al carrito!`, 'success');
+      });
+
+      // Evento Comprar Ahora
+      document.getElementById('btn-buy-now').addEventListener('click', () => {
+        const qty = parseInt(qtyInput.value, 10) || 1;
+        addToCart(currentProduct, qty);
+        window.location.href = 'checkout.html';
+      });
+
+      applyTranslations();
+    }
+
+    async function loadRelatedProducts() {
+      const container = document.getElementById('related-products-grid');
+      const all = await getProducts();
+      // Sugerir otros 3 productos excluyendo el actual
+      const related = all.filter(p => p.id !== currentProduct.id).slice(0, 3);
+      container.innerHTML = related.map(p => createProductCardHtml(p)).join('');
+      bindAddToCartButtons(container);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initProductPage();
+      onCurrencyChange(() => renderProductDetail());
+      onLanguageChange(() => renderProductDetail());
+    });
+  </script>
+</body>
+</html>
+
